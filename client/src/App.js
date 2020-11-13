@@ -1,7 +1,9 @@
-const App = () => {
+import { Main } from './components/Main/Main'
+
+export const App = () => {
     return (
         <div className="App">
-            <h1>App</h1>
+            <Main />
         </div>
     )
 }
