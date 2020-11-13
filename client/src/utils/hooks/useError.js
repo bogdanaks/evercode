@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { Error as ErrorComponent } from './Error'
+import { Error as ErrorComponent } from '../../components/Error/Error'
 
 export const useError = () => {
     const [errors, setErrors] = React.useState([])

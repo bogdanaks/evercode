@@ -8,7 +8,7 @@ import { Select } from '../Select/Select'
 import { Input } from '../Input/Input'
 import { useCryptoBalance } from '../../utils/hooks/useCryptoBalance'
 import { useExportCSV } from '../../utils/hooks/useExportCSV'
-import { useError } from '../../utils/hooks/useError/useError'
+import { useError } from '../../utils/hooks/useError'
 
 export const Main = () => {
     const [list, setList] = React.useState([])
