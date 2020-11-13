@@ -1,0 +1,15 @@
+.errorBlock {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    font-size: 18px;
+    color: rgb(97, 26, 21);
+    background-color: rgb(255, 215, 211);
+}
