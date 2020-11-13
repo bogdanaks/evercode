@@ -1,0 +1,93 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .mainBlock {
+        width: 800px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        padding: 10px;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            h2 {
+                color: rgb(15, 11, 31);
+            }
+            button {
+                height: 40px;
+                cursor: pointer;
+                background: #4878ff;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                padding: 0 10px;
+                transition: background 0.3s ease;
+                &:hover {
+                    background: #305ace;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            button {
+                width: 9%;
+                height: 40px;
+                cursor: pointer;
+                background: #4878ff;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                transition: background 0.3s ease;
+                &:hover {
+                    background: #305ace;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .list {
+            li {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                list-style: none;
+                height: 40px;
+                .title {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: row;
+                    h4 {
+                        margin-right: 5px;
+                    }
+                    span {
+                        color: gray;
+                    }
+                }
+                .address {
+                    width: 40%;
+                }
+                .cash {
+                    width: 30%;
+                    color: seagreen;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
