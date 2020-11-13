@@ -1,16 +1,13 @@
 import React from 'react'
+import api from '../../utils/axios'
 
 import styles from './styles.module.scss'
-
-import BTC from '../../assets/icons/btc.svg'
-import ETH from '../../assets/icons/eth.svg'
-import XRP from '../../assets/icons/xrp.svg'
-import BNB from '../../assets/icons/bnb.svg'
-import BCH from '../../assets/icons/bch.svg'
+import { icons } from '../../utils/icons'
 
 export const Select = ({ select, setSelect }) => {
     const divRef = React.useRef(null)
     const [open, setOpen] = React.useState(false)
+    const [list, setList] = React.useState([])
 
     const handleOpenList = () => {
         setOpen(!open)
@@ -19,6 +16,12 @@ export const Select = ({ select, setSelect }) => {
         setSelect({ title, desc })
     }
     React.useEffect(() => {
+        async function fetchList() {
+            const res = await api.get('/api/crypto')
+            setList(res.data)
+        }
+        fetchList()
+
         function handleClickOutside(event) {
             if (divRef.current && !divRef.current.contains(event.target)) {
                 setOpen(false)
@@ -39,31 +42,15 @@ export const Select = ({ select, setSelect }) => {
                 <span>{select.title}</span>
             </div>
             <ul className={[styles.ulBlock, open ? styles.show : ''].join(' ')}>
-                <li onClick={() => handleSetSelect('BTC', 'Биткойн')}>
-                    <img src={BTC} alt="BTC" />
-                    <h4>Биткойн</h4>
-                    <span>BTC</span>
-                </li>
-                <li onClick={() => handleSetSelect('ETH', 'Ethereum')}>
-                    <img src={ETH} alt="ETH" />
-                    <h4>Ethereum</h4>
-                    <span>ETH</span>
-                </li>
-                <li onClick={() => handleSetSelect('XRP', 'Рябь')}>
-                    <img src={XRP} alt="XRP" />
-                    <h4>Рябь</h4>
-                    <span>XRP</span>
-                </li>
-                <li onClick={() => handleSetSelect('BNB', 'Binance Coin')}>
-                    <img src={BNB} alt="BNB" />
-                    <h4>Binance Coin</h4>
-                    <span>BNB</span>
-                </li>
-                <li onClick={() => handleSetSelect('BCH', 'Биткойн Кэш')}>
-                    <img src={BCH} alt="BCH" />
-                    <h4>Биткойн Кэш</h4>
-                    <span>BCH</span>
-                </li>
+                {list.map((el) => {
+                    return (
+                        <li key={el.id} onClick={() => handleSetSelect(el.ticker, el.title)}>
+                            <img src={icons[el.ticker]} alt={el.ticker} />
+                            <h4>{el.title}</h4>
+                            <span>{el.ticker}</span>
+                        </li>
+                    )
+                })}
             </ul>
         </div>
     )
