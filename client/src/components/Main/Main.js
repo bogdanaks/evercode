@@ -23,11 +23,16 @@ export const Main = () => {
         if (input.length > 0) {
             const balance = await getBalance()
             if (balance !== undefined) {
-                setList((prevState) => [
-                    ...prevState,
-                    { info: select, address: input, cash: balance, uuid: uuidv4() },
-                ])
-                setInput('')
+                const check = list.some((el) => el.address === input.trim())
+                if (!check) {
+                    setList((prevState) => [
+                        ...prevState,
+                        { info: select, address: input, cash: balance, uuid: uuidv4() },
+                    ])
+                    setInput('')
+                } else {
+                    show('Такой адрес уже есть, удалите его прежде чем добавить снова!')
+                }
             }
         }
     }
