@@ -12,6 +12,7 @@ export const useExportCSV = (data, showError) => {
 
     const download = () => {
         if (data.length > 0) {
+            setArr([])
             data.forEach((el) => {
                 setArr((prevState) => [
                     ...prevState,
