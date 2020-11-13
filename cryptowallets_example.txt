@@ -1,0 +1,8 @@
+BTC - 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2
+ETH - 0x493c4afb73b490e988650b9758e7736c72af748f
+XRP - r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV
+BCH - bitcoincash:qpk4hk3wuxe2uqtqc97n8atzrrr6r5mleczf9sur4h
+BSV - 1P3GQYtcWgZHrrJhUa4ctoQ3QoCU2F65nz
+LTC - ltc1qxlezr3s0y276e7fr6san5z74xyva2xfejdu6sq
+ZEC - t1ZGgzX1YN7xjsid4viEzzqskayCtKvYzyD
+DOGE - DJZyFGWbk8pE7g95hZvrNgideTnE2STJ9V
