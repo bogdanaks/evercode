@@ -1,0 +1,49 @@
+{
+    "wallets": [
+        {
+            "id": 1,
+            "ticker": "BTC",
+            "title": "Биткоин"
+        },
+        {
+            "id": 2,
+            "ticker": "ETH",
+            "title": "Ethereum"
+        },
+        {
+            "id": 3,
+            "ticker": "XRP",
+            "title": "Рябь"
+        },
+        {
+            "id": 4,
+            "ticker": "BCH",
+            "title": "Биткойн Кэш"
+        },
+        {
+            "id": 5,
+            "ticker": "BSV",
+            "title": "Bitcoin SV"
+        },
+        {
+            "id": 6,
+            "ticker": "LTC",
+            "title": "Litecoin"
+        },
+        {
+            "id": 7,
+            "ticker": "DASH",
+            "title": "Dash"
+        },
+        {
+            "id": 8,
+            "ticker": "ZEC",
+            "title": "Zcash"
+        },
+        {
+            "id": 9,
+            "ticker": "DOGE",
+            "title": "Dogecoin"
+        }
+    ]
+}
